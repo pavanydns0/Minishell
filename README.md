@@ -1,19 +1,3 @@
-Structure:
-MiniShell/
-│── README.md
-│── LICENSE
-│── Makefile
-│── src/
-│── include/
-│── obj/
-│── docs/
-│     ├── architecture.png
-│     ├── flowchart.png
-│── images/
-│     ├── demo.gif
-│     ├── screenshot1.png
-│── .gitignore
-
 MiniShell - Linux Command Line Interpreter
 Overview
 
@@ -334,36 +318,6 @@ MiniShell$ fg 1
 Resume Job
 MiniShell$ bg 1
 
-Project Architecture
-             +----------------+
-             |    User Input  |
-             +----------------+
-                     |
-                     ▼
-             Command Parser
-                     |
-        +------------+-------------+
-        |                          |
-        ▼                          ▼
-  Built-in Commands        External Commands
-        |                          |
-        ▼                          ▼
- Execute Directly             fork()
-                                   |
-                                   ▼
-                               execvp()
-                                   |
-                                   ▼
-                           Linux Executable
-                                   |
-                                   ▼
-                              Process Control
-                                   |
-                                   ▼
-                             Signal Handling
-                                   |
-                                   ▼
-                            Return to Prompt
 Learning Outcomes
 
 Through this project, I gained hands-on experience with:
